@@ -24,8 +24,9 @@ def parse_args():
                       action = 'store_true',
                       help = "Boolean, set to true if present")
   parser.add_argument("--arg4",
+                      choices=['rock', 'paper', 'scissors'],
                       required = True,
-                      help = "Required string")
+                      help = "Required string with specific allowed values")
 
   args = parser.parse_args() # returns argparse.Namespace object
   return vars(args)          # convert to more convenient dict representation
